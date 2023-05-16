@@ -32,9 +32,11 @@ To complete the assignment, you must deploy the application on your AWS Student 
 - You need to set nginx to serve this as default site.
 - Use Ondrej PPA for latest PHP version.
 - Use MySQL repository for latest MySQL version.
+- You need to run `composer update` after cloning the repository.
+- You need to run `php artisan key:generate` after cloning the repository.
 - Don't forget to set .env file. Make sure it is pointed to correct database server.
+- The endpoint for the application is `/info/php` and `/info/server`
 
 ### Useful Links
 - Installing MySQL 8.0 on Ubuntu 22.04: https://computingforgeeks.com/how-to-install-mysql-8-on-ubuntu/
 - Installing PHP 8.2 on Ubuntu 22.04: https://techvblogs.com/blog/install-php-8-2-ubuntu-22-04
-- 
