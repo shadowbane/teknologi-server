@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Matriphe\Larinfo\LarinfoFacade as Larinfo;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', static function () {
     return view('welcome');
+});
+
+Route::prefix('info')->group(function () {
+    Route::get('php', static function () {
+        phpinfo();
+    });
+
+    Route::get('server', static function () {
+        return Larinfo::getInfo();
+    });
 });
